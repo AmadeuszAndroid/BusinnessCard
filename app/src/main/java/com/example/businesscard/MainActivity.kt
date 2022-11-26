@@ -60,6 +60,11 @@ fun BusinessCard() {
             fontSize = 36.sp,
             color = Color.White
         )
+        Text(
+            text = stringResource(R.string.signature),
+            fontSize = 24.sp,
+            color = Color.Green
+        )
     }
 }
 

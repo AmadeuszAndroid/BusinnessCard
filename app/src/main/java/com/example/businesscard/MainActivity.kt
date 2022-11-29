@@ -93,8 +93,8 @@ fun BusinessCard() {
         )
         Text(
             text = stringResource(R.string.signature),
-            fontSize = 24.sp,
-            color = Color.Green
+            fontSize = 20.sp,
+            color = colorResource(R.color.aquamarine)
         )
 
         Column(

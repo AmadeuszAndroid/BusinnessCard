@@ -5,10 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.Divider
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -39,6 +37,39 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
+fun SignatureRow(drawableId: Int, name: String) {
+    val image = painterResource(drawableId)
+    Column(
+
+    ) {
+        Divider(
+            color = Color.Gray,
+            modifier = Modifier
+                .padding(
+                    top = 10.dp,
+                    bottom = 10.dp
+                ),
+            thickness = 2.dp
+        )
+        Row(
+            modifier = Modifier
+                .padding(start = 20.dp)
+        ) {
+            Image(
+                painter = image,
+                contentDescription = null
+            )
+            Text(
+                text = name,
+                color = Color.White,
+                modifier = Modifier.padding(start = 30.dp)
+            )
+        }
+    }
+
+}
+
+@Composable
 fun BusinessCard() {
     val image = painterResource(R.drawable.android_logo)
     Column(
@@ -65,6 +96,14 @@ fun BusinessCard() {
             fontSize = 24.sp,
             color = Color.Green
         )
+
+        Column(
+            modifier = Modifier.padding(top = 40.dp)
+        ) {
+            SignatureRow(R.drawable.ic_phone, stringResource(R.string.phone))
+            SignatureRow(R.drawable.ic_share, stringResource(R.string.github_url))
+            SignatureRow(R.drawable.ic_email, stringResource(R.string.e_mail))
+        }
     }
 }
 

@@ -2,4 +2,7 @@
     <string name="app_name">Wizytówka</string>
     <string name="name_surname">Amadeusz Lisiecki</string>
     <string name="signature">Programista Androida</string>
+    <string name="phone">+48 784 620 784</string>
+    <string name="github_url">https://github.com/AmadeuszAndroid</string>
+    <string name="e_mail">amadeusz.lisiecki.1993@gmail.com</string>
 </resources>
